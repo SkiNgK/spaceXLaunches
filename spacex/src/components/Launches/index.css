@@ -2,6 +2,13 @@
   margin-left: 15rem;
 }
 
+.Launches .center-page{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: 0rem;
+}
+
 .Launches .title-container h1{
   font-weight: 300;
   font-size: 29px;

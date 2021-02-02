@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import DataTable from 'react-data-table-component';
 import DataTableExtensions from 'react-data-table-component-extensions';
 import moment from 'moment'
@@ -19,10 +19,6 @@ const customStyles = {
 
 export default function LaunchsTable({ launches }) {
   const data = launches
-
-  useEffect(() => {
-    console.log('launches',launches)
-  }, [])
 
   //datatable config
   const columns = [

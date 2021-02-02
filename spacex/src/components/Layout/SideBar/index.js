@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import SideNav, { NavItem, NavText } from '@trendmicro/react-sidenav';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import Logo from '../../../assets/img/spacex-logo.png'
@@ -14,7 +14,7 @@ function SideBar() {
         onToggle={{}}
       >
         <div className="logo-area">
-          <img src={Logo} alt="Ares Logo" className="logo" />
+          <img src={Logo} alt="SpaceX" className="logo" />
         </div>
         <SideNav.Nav >
           <NavItem eventKey="launches">
@@ -33,12 +33,16 @@ function SideBar() {
           </NavItem>
           <NavItem eventKey="my-devices">
             <NavText>
-              Lançamentos anteriores
+              <AnchorLink href='#pastLaunches' >
+                Lançamentos anteriores
+              </AnchorLink>
             </NavText>
           </NavItem>
           <NavItem eventKey="locations">
             <NavText>
-              Próximos lançamentos
+              <AnchorLink href='#upLaunch' >
+                Próximos lançamentos
+              </AnchorLink>
             </NavText>
           </NavItem>
         </SideNav.Nav>
