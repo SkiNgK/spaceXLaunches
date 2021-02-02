@@ -1,0 +1,36 @@
+.SideBar {
+  position: fixed;
+  width: 0%;
+  font-weight: 400;
+  background: #213D8B;
+  color: #fff;
+  text-align: center;
+}
+
+.SideBar .logo-area {
+  background-color: #F4F4F4;
+  margin-bottom: 1rem;
+}
+
+.SideBar .logo-area .logo {
+  padding: 1rem;
+  width: 100%; 
+}
+
+.SideBar .icon-area {
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+.side-menu-dropdown {
+  position: relative;
+}
+
+.dropdown-item{
+  margin-left: 2rem;
+}
+
+.dropdown-icon{
+  margin-left: 5rem;
+}

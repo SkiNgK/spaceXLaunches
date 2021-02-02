@@ -1,0 +1,14 @@
+.Launches {
+  margin-left: 15rem;
+}
+
+.Launches .title-container h1{
+  font-weight: 300;
+  font-size: 29px;
+  border-left: solid 5px #213D8B;
+  padding: .5rem;
+}
+
+.Launches .content-container{
+  padding: 3.5rem;
+}
