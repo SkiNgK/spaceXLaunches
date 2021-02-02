@@ -18,9 +18,9 @@ const customStyles = {
 };
 
 export default function LaunchsTable({ launches }) {
-  const data = launches
-
+  
   //datatable config
+  const data = launches
   const columns = [
     {
       name: 'Missão',

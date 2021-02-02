@@ -28,13 +28,13 @@ function Launch({ lastLaunch, completed, section }) {
               frameborder="0"
               allowfullscreen />
             :
-            <iframe 
-            width="700" 
-            height="415" 
-            title='Why SpaceX is Making Starlink'
-            src="https://www.youtube.com/embed/giQ8xEWjnBs" 
-            frameborder="0" 
-            allowfullscreen/>
+            <iframe
+              width="700"
+              height="415"
+              title='Why SpaceX is Making Starlink'
+              src="https://www.youtube.com/embed/giQ8xEWjnBs"
+              frameborder="0"
+              allowfullscreen />
           }
           <div className={section === 'blue' ? "mission-details" : "mission-details-light"}>
             <h1>{lastLaunch.mission_name}</h1>
@@ -82,7 +82,7 @@ function Launch({ lastLaunch, completed, section }) {
             <div className="mission-date">
               Data de Lançamento:
               <div className="date">
-              {moment.utc(lastLaunch.launch_date_utc).local().format('DD/MM/YYYY HH:mm:ss')}
+                {moment.utc(lastLaunch.launch_date_utc).local().format('DD/MM/YYYY HH:mm:ss')}
               </div>
             </div>
           </div>

@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import api from '../../services/Api';
 import AllLaunches from './AllLaunches';
 import Launch from './Launch';
+import swal from 'sweetalert';
+import { Spinner } from 'react-bootstrap';
 
 import './index.css'
-import 'react-data-table-component-extensions/dist/index.css';
-import { Spinner } from 'react-bootstrap';
 
 function Launches() {
   const [allLaunches, setAllLaunches] = useState(null)
@@ -18,6 +18,7 @@ function Launches() {
     init()
   }, [])
 
+  //Inicialization
   async function init() {
     setLoading(true)
     await getAllLaunches()
@@ -39,52 +40,53 @@ function Launches() {
     setLoading(false)
   }
 
+  //Fetch data
+  // Fetch all launches 
   const getAllLaunches = async () => {
     try {
       const response = await api.get('/launches')
       return response.data;
     } catch (error) {
+      console.log(error);
+      swal("Erro!", "Não foi possível recuperar os dados de todos os lançamentos", "error")
       return error
     }
   }
 
+  // Fetch latest launch
   const getLastLaunch = async () => {
     try {
       const response = await api.get('/launches/latest')
       return response.data;
     } catch (error) {
       console.log(error);
+      swal("Erro!", "Não foi possível recuperar os dados do último lançamento", "error")
       return error
     }
   }
 
-
+  // Fetch past launches
   const getPastLaunches = async () => {
     try {
       const response = await api.get('/launches/past')
       return response.data;
     } catch (error) {
       console.log(error);
+      swal("Erro!", "Não foi possível recuperar os dados dos lançamentos anteriores", "error")
       return error
     }
   }
 
+  // Fetch upcoming launches
   const getUpcommingLaunch = async () => {
     try {
       const response = await api.get('/launches/upcoming')
       return response.data;
     } catch (error) {
       console.log(error);
+      swal("Erro!", "Não foi possível recuperar os dados dos próximos lançamentos", "error")
       return error
     }
-  }
-
-  function renderEmptyData(){
-    return(
-      <div className="">
-        Sem dados
-      </div>
-    )
   }
 
   return (
