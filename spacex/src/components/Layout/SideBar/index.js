@@ -1,22 +1,15 @@
 import React, { useRef } from 'react';
-import { useHistory } from 'react-router-dom'
 import SideNav, { NavItem, NavText } from '@trendmicro/react-sidenav';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import Logo from '../../../assets/img/spacex-logo.png'
 import './index.css'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 function SideBar() {
-  const history = useHistory();
-
-  const wrapperRef = useRef(null);
-
   return (
-    <div ref={wrapperRef}>
+    <div>
       <SideNav
         className="SideBar"
-        onSelect={(selected) => {
-          history.push('/' + selected);
-        }}
         expanded={true}
         onToggle={{}}
       >
@@ -24,24 +17,28 @@ function SideBar() {
           <img src={Logo} alt="Ares Logo" className="logo" />
         </div>
         <SideNav.Nav >
-          <NavItem eventKey="profile">
+          <NavItem eventKey="launches">
             <NavText>
-              Lançamentos
+              <AnchorLink href='#launches' >
+                Lançamentos
+              </AnchorLink>
             </NavText>
           </NavItem>
-          <NavItem eventKey="devices">
+          <NavItem eventKey="lastLaunches">
             <NavText>
-              Lançamentos anteriores
+              <AnchorLink href='#lastLaunches' >
+                Último lançamento
+              </AnchorLink>
             </NavText>
           </NavItem>
           <NavItem eventKey="my-devices">
             <NavText>
-              Próximos lançamentos
+              Lançamentos anteriores
             </NavText>
           </NavItem>
           <NavItem eventKey="locations">
             <NavText>
-              Último lançamento
+              Próximos lançamentos
             </NavText>
           </NavItem>
         </SideNav.Nav>

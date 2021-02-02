@@ -1,0 +1,81 @@
+.LatestLaunch {
+  
+}
+
+.LatestLaunch .mission-content{
+  display: flex;
+  flex-direction: row;
+}
+
+.LatestLaunch .mission-details{
+  margin-left: 5rem;
+  position: relative;
+}
+
+.LatestLaunch .mission-details img{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.LatestLaunch .mission-details .mission-conclusion{
+  display: flex;
+  flex-direction: row;
+  color: white;
+  font-weight: 300;
+  font-size: 19px;
+}
+
+.LatestLaunch .mission-details .success{
+  color: green;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.LatestLaunch .mission-details .failure{
+  color: red;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.LatestLaunch .mission-details .mission-local{
+  color: white;
+  font-weight: 300;
+  font-size: 19px;
+}
+
+.LatestLaunch .mission-details .mission-local .location{
+  margin-top: 1rem;
+}
+
+.LatestLaunch .mission-details h1{
+  font-weight: 300;
+  font-size: 29px;
+  color: #f4f4f4;
+}
+
+.LatestLaunch .mission-details span{
+  font-weight: 300;
+  font-size: 19px;
+  color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.LatestLaunch .mission-details svg{
+  color: #f4f4f4;
+  margin-right: 1rem;
+}
+
+.LatestLaunch .mission-details .mission-date{
+  color: white;
+  font-weight: 300;
+  font-size: 19px;
+  position: absolute;
+  bottom: 0;
+}
+
+.LatestLaunch .mission-details .mission-more-info{
+  margin-top: 1rem;
+}

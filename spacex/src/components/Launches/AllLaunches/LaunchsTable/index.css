@@ -1,0 +1,11 @@
+.LaunchsTable{
+
+}
+
+.LaunchsTable .success{
+  color: green;
+}
+
+.LaunchsTable .failure{
+  color: red;
+}

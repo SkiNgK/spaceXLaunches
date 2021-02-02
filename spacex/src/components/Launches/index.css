@@ -10,5 +10,21 @@
 }
 
 .Launches .content-container{
-  padding: 3.5rem;
+  padding: 3rem;
+}
+
+.Launches .blue{
+  background-color: #213D8B;
+}
+
+.Launches .blue .title-container h1{
+  font-weight: 300;
+  font-size: 29px;
+  border-left: solid 5px #f4f4f4;
+  color: white;
+  padding: .5rem;
+}
+
+.Launches .white{
+  background-color: #f4f4f4;
 }

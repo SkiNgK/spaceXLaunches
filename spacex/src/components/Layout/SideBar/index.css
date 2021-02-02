@@ -17,20 +17,8 @@
   width: 100%; 
 }
 
-.SideBar .icon-area {
-  display: flex;
-  align-items: center;
-  margin-left: 1.5rem;
-}
-
-.side-menu-dropdown {
-  position: relative;
-}
-
-.dropdown-item{
-  margin-left: 2rem;
-}
-
-.dropdown-icon{
-  margin-left: 5rem;
+.SideBar a{
+  display:block; 
+  height:100%;
+  text-decoration: none;
 }
