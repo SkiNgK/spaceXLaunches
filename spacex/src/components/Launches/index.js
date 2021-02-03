@@ -13,10 +13,19 @@ function Launches() {
   const [pastLaunches, setPastLaunches] = useState(null)
   const [upLaunch, setUpLaunch] = useState(null)
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
 
   useEffect(() => {
     init()
+    console.log('api', api.defaults)
   }, [])
+
+  useEffect(() => {
+    if (error) {
+      console.log('error')
+      swal("Erro!", "Não foi possível recuperar os dados dos lançamentos", "error")
+    }
+  }, [error])
 
   //Inicialization
   async function init() {
@@ -48,7 +57,7 @@ function Launches() {
       return response.data;
     } catch (error) {
       console.log(error);
-      swal("Erro!", "Não foi possível recuperar os dados de todos os lançamentos", "error")
+      setError(true)
       return error
     }
   }
@@ -60,7 +69,7 @@ function Launches() {
       return response.data;
     } catch (error) {
       console.log(error);
-      swal("Erro!", "Não foi possível recuperar os dados do último lançamento", "error")
+      setError(true)
       return error
     }
   }
@@ -72,7 +81,7 @@ function Launches() {
       return response.data;
     } catch (error) {
       console.log(error);
-      swal("Erro!", "Não foi possível recuperar os dados dos lançamentos anteriores", "error")
+      setError(true)
       return error
     }
   }
@@ -84,14 +93,14 @@ function Launches() {
       return response.data;
     } catch (error) {
       console.log(error);
-      swal("Erro!", "Não foi possível recuperar os dados dos próximos lançamentos", "error")
+      setError(true)
       return error
     }
   }
 
   return (
     <div className="Launches">
-      {loading ?
+      {loading || error ?
         <div className="center-page">
           <Spinner animation="border" />
         </div>

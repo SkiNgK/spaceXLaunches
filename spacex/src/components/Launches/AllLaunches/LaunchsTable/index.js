@@ -18,7 +18,7 @@ const customStyles = {
 };
 
 export default function LaunchsTable({ launches }) {
-  
+
   //datatable config
   const data = launches
   const columns = [
@@ -44,7 +44,7 @@ export default function LaunchsTable({ launches }) {
       name: 'Conclusão',
       selector: 'launch_success',
       cell: row => {
-        if(row.launch_success){
+        if (row.launch_success) {
           return <span className="success">Sucesso</span>
         } else {
           return <span className="failure">Fracasso</span>
@@ -69,22 +69,29 @@ export default function LaunchsTable({ launches }) {
 
   return (
     <div className='LaunchsTable'>
-      <DataTableExtensions
-        {...tableData}
-        filterPlaceholder="Pesquisar lançamentos"
-        print={false}
-        export={false}
-        exportHeaders={true}>
-        <DataTable
-          columns={columns}
-          data={data}
-          noDataComponent={
-            <span>Nenhum versão registrada</span>
-          }
-          pagination={true}
-          customStyles={customStyles}
-        />
-      </DataTableExtensions>
+      {
+        launches &&
+        <DataTableExtensions
+          {...tableData}
+          filterPlaceholder="Pesquisar lançamentos"
+          print={false}
+          export={false}
+          exportHeaders={true}>
+          <DataTable
+            columns={columns}
+            data={data}
+            noDataComponent={
+              <span>Nenhum versão registrada</span>
+            }
+            pagination={true}
+            customStyles={customStyles}
+          />
+        </DataTableExtensions>
+        // :
+        // <div>
+        //   Sem dados
+        // </div>
+      }
     </div>
   )
 }
